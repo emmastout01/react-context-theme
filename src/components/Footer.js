@@ -1,10 +1,10 @@
 import Button from './Button';
 
-const Footer = ({theme}) => {
+const Footer = () => {
     return <div className='footer'>
         <hr />
-        <Button theme={theme}>Subscribe</Button>
-        <Button theme={theme}>Email us</Button>
+        <Button>Subscribe</Button>
+        <Button>Email us</Button>
     </div>
 }
 

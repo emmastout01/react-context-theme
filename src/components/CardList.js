@@ -1,10 +1,10 @@
 import Card from './Card';
 
-const CardList = ({ theme, items }) => {
+const CardList = ({ items }) => {
     return (
         <div className='card-list'>
             {items.map(item => (
-                <Card item={item} theme={theme} />
+                <Card item={item} />
             ))
             }
         </div>

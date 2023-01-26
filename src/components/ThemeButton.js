@@ -2,7 +2,7 @@ import Button from './Button';
 
 const ThemeButton = ({ theme, setTheme }) => {
     if (theme === 'dark') {
-        return <Button onClick={() => setTheme('light')} className='theme-button' theme={theme}>
+        return <Button onClick={() => setTheme('light')} className='theme-button'>
             <span className="material-symbols-outlined">
                 light_mode
             </span>
