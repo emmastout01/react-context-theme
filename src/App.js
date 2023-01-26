@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { items } from './items';
+import ThemeButton from './components/ThemeButton';
+import Header from './components/Header';
+import CardList from './components/CardList';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`page page-${theme}`}>
+      <ThemeButton theme={theme} setTheme={setTheme} />
+      <Header theme={theme} />
+      <CardList items={[...items, ...items]} theme={theme} />
+      <Footer theme={theme} />
     </div>
   );
 }
