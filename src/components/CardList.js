@@ -4,7 +4,7 @@ const CardList = ({ theme, items }) => {
     return (
         <div className='card-list'>
             {items.map(item => (
-                <Card item={item} theme={theme} />
+                <Card theme={theme} item={item} />
             ))
             }
         </div>

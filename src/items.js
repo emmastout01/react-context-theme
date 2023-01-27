@@ -1,4 +1,4 @@
-export const items = [{
+const items = [{
     name: 'Apple',
     price: '2.00',
     description: "A tasty apple!",
@@ -44,4 +44,6 @@ export const items = [{
     description: "A tasty tomato!",
     image: "https://toppng.com/uploads/preview/tomato-transparent-11546976478ldvgdzvazt.png"
   }]
+
+  export const allItems = [...items, ...items];
   

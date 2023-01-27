@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { items } from './items';
+import { allItems } from './items';
 import ThemeButton from './components/ThemeButton';
 import Header from './components/Header';
 import CardList from './components/CardList';
@@ -10,12 +10,12 @@ function App() {
   const [theme, setTheme] = useState('light');
 
   return (
-    <div className={`page page-${theme}`}>
-      <ThemeButton theme={theme} setTheme={setTheme} />
-      <Header theme={theme} />
-      <CardList items={[...items, ...items]} theme={theme} />
-      <Footer theme={theme} />
-    </div>
+      <div className={`page page-${theme}`}>
+        <ThemeButton theme={theme} setTheme={setTheme} />
+        <Header theme={theme} />
+        <CardList theme={theme} items={allItems} />
+        <Footer theme={theme} />
+      </div>
   );
 }
 
