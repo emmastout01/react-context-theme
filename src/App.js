@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { allItems } from './items';
+import { items } from './items';
 import ThemeButton from './components/ThemeButton';
 import Header from './components/Header';
 import CardList from './components/CardList';
@@ -13,7 +13,7 @@ function App() {
       <div className={`page page-${theme}`}>
         <ThemeButton theme={theme} setTheme={setTheme} />
         <Header theme={theme} />
-        <CardList theme={theme} items={allItems} />
+        <CardList theme={theme} items={items} />
         <Footer theme={theme} />
       </div>
   );
